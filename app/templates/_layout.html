@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#a55f41"/>
+	
+	<title>{% if title is defined %}{{ title  }} | {% endif %}{{ siteName }}</title>
+	
+	<link rel="shortcut icon" href="{{ siteUrl }}_assets/images/favicon.png" type="image/x-icon">
+	
+	<!-- Stylesheet -->
+	<link href="{{ siteUrl }}assets/css/foundation.min.css" rel="stylesheet"/>
+	<link href="{{ siteUrl }}assets/css/style.css" rel="stylesheet"/>
+	
+	<!-- Scripts -->
+	<script src="{{ siteUrl }}assets/js/jquery.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+{% block head %}
+
+{% endblock %}
+
+</head>
+<body>
+	
+	<header>
+		<div class="grid-x">
+			<div class="shrink cell">
+				<img class="logo" src="assets/icons/white_logo.svg" />
+			</div>
+			<div class="auto cell">
+				<div class="grid-x align-right">
+					<div class="shrink cell">
+						<a class="link" href="{{ siteUrl }}destinations">Destinations</a>
+					</div>
+					<div class="shrink cell">
+						<a class="link" href="{{ siteUrl }}difference">The Difference</a>
+					</div>
+					<div class="shrink cell">
+						<a class="link" href="{{ siteUrl }}about">About Us</a>
+					</div>
+					<div class="shrink cell">
+						<a class="link" href="{{ siteUrl }}contact">Contact</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		{% block content %}
+		<h1>Craft is not working</h1>
+		{% endblock %}
+	</main>
+
+<script src="{{ siteUrl }}assets/js/foundation.min.js"></script>
+<script src="{{ siteUrl }}assets/js/script.js"></script>
+</script>
+</body>
+</html>

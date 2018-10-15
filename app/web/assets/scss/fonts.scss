@@ -1,0 +1,41 @@
+/*
+	
+	
+	Fonts for Offsite
+	
+	
+*/
+
+
+// -------- Gotham -------- //
+
+// Book
+@font-face {
+	font-family: "gotham", sans-serif;
+	src: url('./fonts/Gotham-Book.otf');
+	font-weight: 400;
+}
+
+// Medium
+@font-face {
+	font-family: "gotham", sans-serif;
+	src: url("./fonts/Gotham-Medium.otf");
+	font-weight: 500;
+}
+
+// Bold
+@font-face {
+	font-family: "gotham", sans-serif;
+	src: url('../fonts/Gotham-Bold.otf');
+	font-weight: 700;
+}
+
+
+// --------- Proxima Nova -------- //
+
+// Bold
+@font-face {
+	font-family: "proxima-nova";
+	src: url('../fonts/ProximaNova-Bold.ttf');
+	font-weight: 700;
+}
