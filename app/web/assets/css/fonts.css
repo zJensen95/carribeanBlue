@@ -1,0 +1,18 @@
+/*
+	
+	
+	Fonts for Offsite
+	
+	
+*/
+@font-face {
+  font-family: "mont";
+  src: url("../fonts/Montserrat-Regular.otf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "mont";
+  src: url("../fonts/Montserrat-Bold.otf");
+  font-weight: 700; }
+
+/*# sourceMappingURL=fonts.css.map */

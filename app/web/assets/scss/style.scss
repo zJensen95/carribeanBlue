@@ -1,0 +1,169 @@
+/*
+	
+	Stylesheet for Carribean Blue Airlines
+	©2018 Carribean Blue Airlines, All Rights Reserved
+	Created by Nominee Design
+	
+*/
+
+@import 'fonts.css';
+
+/*
+	
+	General
+	
+	- Typography
+	
+	
+*/
+
+// -------- Brand -------- //
+
+// Utlity Variables
+
+$maxWidth: 70em;
+
+// Colors
+$teal: #78ddda;
+$blue: #6e6eff;
+$light-grey: #f9f9f9;
+
+
+// -------- Foundation -------- //
+
+.grid-container {
+	max-width: $maxWidth;
+}
+
+// -------- Utilities -------- //
+
+.bg-image {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.full-height {
+	height: 100%;
+}
+
+// Section
+section {
+	padding: 60px 0px;
+	
+	&:first-of-type,
+	&.pt {
+		padding-top: 120px;
+	}
+	&:last-of-type,
+	&.pb {
+		padding-bottom: 120px;
+	}
+	&.pbt {
+		padding-bottom: 120px;
+		padding-top: 120px;
+	}
+	&.no-padding {
+		padding: 0px;
+	}
+	
+	// Colors
+	&.light-grey {
+		background: #f9f9f9;
+	}
+
+}
+
+// -------- Typography ------- //
+
+// Header One
+h1 {
+	font: normal 700 3rem/1.3em "mont", sans-serif;
+}
+
+h2 {
+	font: normal 700 1.75rem/1.3em "mont", sans-serif;
+}
+
+h3 {
+	font: normal 700 .9rem/1.2em "mont", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+p {
+	font: normal 400 .9rem/2em "mont", sans-serif;
+	letter-spacing: .025em;
+}
+
+a {
+	font: normal 700 .9rem/1.3em "mont", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+// Styles
+h1, h2, h3, h4, h5, h6, p {
+	
+	// Colors
+	&.teal {
+		color: $teal;
+	}
+	&.blue {
+		color: $blue;
+	}
+	&.white {
+		color: #fff;
+	}
+	
+	// Weights
+	&.reg {
+		font-weight: 400;
+	}
+	&.bold {
+		font-weight: 700;
+	}
+}
+
+
+	
+// --------	Basic Templates -------- //
+
+// Header
+header {
+	background: $teal;
+	padding: 25px 70px;
+	.logo {
+		width: 65px;
+	}
+	.link {
+		color: #fff;
+		margin-left: 30px;
+	}
+}
+
+// Banner 
+
+.banner {
+	.grid-x {
+		min-height: 450px;
+	}
+}
+
+/*
+	
+	Pages
+	
+*/
+
+.homepage-about {
+	h1 {
+		margin-bottom: 25px;
+	}
+}
+.why-carribean {
+	margin-top: 70px;
+	
+	img {
+		margin-bottom: 25px;
+	}
+}
