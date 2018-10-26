@@ -21,7 +21,7 @@
 
 // Utlity Variables
 
-$maxWidth: 70em;
+$maxWidth: 80em;
 
 // Colors
 $teal: #78ddda;
@@ -37,6 +37,34 @@ $light-grey: #f9f9f9;
 
 // -------- Utilities -------- //
 
+.three-cards {
+	h2 {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	.description {
+		background: #fff;
+		padding: 40px;
+	}
+	a {
+		display: inline-block;
+		margin-top: 30px;
+	}
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.gradient-bottom-blue {
+	position: absolute;
+		top: 0;
+		left: 0;
+	z-index: 1;
+	height: 100%; width: 100%;
+	background: linear-gradient(90deg, $teal 0%, $teal 0%);
+}
+
 .bg-image {
 	background-size: cover;
 	background-position: center center;
@@ -44,6 +72,41 @@ $light-grey: #f9f9f9;
 }
 .full-height {
 	height: 100%;
+}
+
+// Margin
+
+.mt-small {
+	margin-top: 20px;
+}
+.mt-medium {
+	margin-top: 40px;
+}
+
+// Padding
+.p-small {
+	padding: 20px;
+}
+p-medium {
+	padding: 40px;
+}
+.pt-small {
+	padding-top: 20px;
+}
+.pt-medium {
+	padding-top: 40px;
+}
+.pb-xlarge {
+	padding-bottom: 180px !important;
+}
+
+// Border
+.border-right {
+	border-right: 1px solid $teal;
+}
+
+.border-white {
+	border-color: #fff;
 }
 
 // Section
@@ -66,9 +129,26 @@ section {
 		padding: 0px;
 	}
 	
+	// Styles
+	
 	// Colors
 	&.light-grey {
 		background: #f9f9f9;
+	}
+
+}
+
+// Div
+div {
+	
+	&.light-grey {
+		background: #f9f9f9;
+	}
+	&.blue {
+		background: $blue;
+	}
+	&.teal {
+		background: $teal;
 	}
 
 }
@@ -78,6 +158,7 @@ section {
 // Header One
 h1 {
 	font: normal 700 3rem/1.3em "mont", sans-serif;
+	letter-spacing: .025em;
 }
 
 h2 {
@@ -102,16 +183,38 @@ a {
 }
 
 // Styles
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a {
+	margin: 0px;
+	
+	// Styles
+	&.underline {
+		padding-bottom: 40px;
+		border-bottom: 2px solid #000;
+	}
+	&.lowercase {
+		text-transform: none;
+	}
 	
 	// Colors
 	&.teal {
 		color: $teal;
+		border-color: $teal;
+	}
+	.teal {
+		color: $teal;
 	}
 	&.blue {
 		color: $blue;
+		border-color: $blue;
+	}
+	.blue {
+		color: $blue;
 	}
 	&.white {
+		color: #fff;
+		border-color: #fff;
+	}
+	.white {
 		color: #fff;
 	}
 	
@@ -122,6 +225,44 @@ h1, h2, h3, h4, h5, h6, p {
 	&.bold {
 		font-weight: 700;
 	}
+	
+}
+
+
+// --------- Interactive -------- //
+
+// Button
+.button {
+	display: inline-block;
+	padding: 20px 20px;
+	color: #fff;
+	background: $teal;
+	
+	&.white {
+		background: #fff;
+		color: $blue;
+	}
+	&.blue {
+		background: $blue;
+		color: #fff;
+	}
+}
+
+// Link
+.link {
+	display: inline-block;
+	color: $teal;
+	padding-bottom: 5px;
+	border-bottom: 1px solid $teal;
+	
+		&.white {
+			color: #fff;
+			border-color: #fff;
+		}
+		&.blue {
+			color: #fff;
+			border-color: $blue;
+		}
 }
 
 
@@ -130,22 +271,84 @@ h1, h2, h3, h4, h5, h6, p {
 
 // Header
 header {
-	background: $teal;
+	background: $blue;
 	padding: 25px 70px;
 	.logo {
-		width: 65px;
+		width: 75px;
 	}
 	.link {
 		color: #fff;
+		margin-left: 50px;
+		border: none;
+		padding: 0px;
+	}
+	h3 {
 		margin-left: 30px;
+	}
+	.button {
+		padding: 10px 30px;
+		margin-left: 50px;
+	}
+}
+
+// Footer
+footer {
+	padding: 120px 0px;
+	background: $teal;
+	position: relative;
+	
+	.grid-container {
+		position: relative;
+		overflow: hidden;
+		max-width: 100em;
+	}
+	.footer-header {
+		padding-right: 60px;
+	}
+	.footer-nav {
+		padding-left: 60px;
+		padding-top: 20px;
+		padding-bottom: 30px;
+		
+		h3 {
+			margin-bottom: 25px;
+		}
+		.head {
+			margin-bottom: 70px;
+		}
+		.cell {
+			padding-right: 50px;
+		}
+	}
+	.waves {
+		position: absolute;
+		width: 100%;
+			top: 0;
+			left: 0;
+		transform: translateY(-75%);
+	}
+	.footer-logo {
+		overflow: hidden;
+		position: absolute;
+			bottom: 0;
+			right: 0;
+		img {
+			transform: translate(10%, 5%);
+		}
 	}
 }
 
 // Banner 
 
 .banner {
+	padding: 30px;
 	.grid-x {
 		min-height: 450px;
+	}
+	.homepage {
+		.grid-x {
+			min-height: 450px;
+		}
 	}
 }
 
@@ -154,6 +357,8 @@ header {
 	Pages
 	
 */
+
+// -------- Homepage -------- //
 
 .homepage-about {
 	h1 {
@@ -165,5 +370,107 @@ header {
 	
 	img {
 		margin-bottom: 25px;
+	}
+}
+
+// Booking
+.homepage-book {
+	.choices {
+		.item {
+			margin-top: 20px;
+			padding: 20px;
+			border: 2px solid #000;
+			
+			&:first-of-type {
+				border-right: 0px;
+			}
+			&:last-of-type {
+				border-left: 0px;
+			}
+		}
+	}
+	.homepage-book-header {
+		margin-bottom: 30px;
+	}
+	input,
+	select {
+		margin-top: 50px;
+	}
+	.button {
+		margin-top: 30px;
+	}
+}
+
+// Guide
+
+.bubble {
+	padding: 40px;
+}
+
+// Locations
+.homepage-locations {
+	h2 {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	.description {
+		background: #fff;
+		padding: 40px;
+	}
+	a {
+		display: inline-block;
+		margin-top: 30px;
+	}
+}
+
+// --------- About -------- //
+
+// Story
+.about-our-story {
+	.teal {
+		margin-right: 20px;
+	}
+	h1 {
+		padding-bottom: 10px;
+		margin-bottom: 60px;
+	}
+}
+
+// Crew
+.about-our-crew {
+	
+	.team-member {
+		margin-top: 50px;
+		
+		h2 {
+			margin-bottom: 10px;
+		}
+	}
+	.headshot {
+		margin-bottom: 20px;
+		background: #444;
+		height: 200px;
+		width: 200px;
+		border-radius: 10000px;
+	}
+}
+
+// Careers
+.about-careers {
+	position: relative;
+	
+	.grid-container {
+		position: relative;
+		z-index: 2;
+	}
+	h2 {
+		margin-bottom: 20px;
+	}
+}
+
+// -------- Destinations -------- //
+.destinations-banner {
+	h1 {
+		margin-bottom: 30px;
 	}
 }
