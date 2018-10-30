@@ -25,8 +25,8 @@ $maxWidth: 80em;
 
 // Colors
 $teal: #78ddda;
-$blue: #6e6eff;
-$light-grey: #f9f9f9;
+$blue: #3875FC;
+$light-grey: #eee;
 
 
 // -------- Foundation -------- //
@@ -36,6 +36,10 @@ $light-grey: #f9f9f9;
 }
 
 // -------- Utilities -------- //
+
+.no-margin {
+	margin: 0px !important;
+}
 
 .three-cards {
 	h2 {
@@ -121,6 +125,9 @@ section {
 	&.pb {
 		padding-bottom: 120px;
 	}
+	&.no-pb {
+		padding-bottom: 0px;
+	}
 	&.pbt {
 		padding-bottom: 120px;
 		padding-top: 120px;
@@ -133,7 +140,10 @@ section {
 	
 	// Colors
 	&.light-grey {
-		background: #f9f9f9;
+		background: $light-grey;
+	}
+	&.blue {
+		background: $blue;
 	}
 
 }
@@ -142,7 +152,7 @@ section {
 div {
 	
 	&.light-grey {
-		background: #f9f9f9;
+		background: $light-grey;
 	}
 	&.blue {
 		background: $blue;
@@ -194,6 +204,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 	&.lowercase {
 		text-transform: none;
 	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	.uppercase {
+		text-transform: uppercase;
+	}
 	
 	// Colors
 	&.teal {
@@ -222,8 +238,16 @@ h1, h2, h3, h4, h5, h6, p, a {
 	&.reg {
 		font-weight: 400;
 	}
+	.reg {
+		font-weight: 400;
+	}
 	&.bold {
 		font-weight: 700;
+	}
+	
+	// Fonts
+	&.circular {
+		font-family: "Circular";
 	}
 	
 }
@@ -232,7 +256,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 // --------- Interactive -------- //
 
 // Button
-.button {
+.button,
+input[type="submit"] {
 	display: inline-block;
 	padding: 20px 20px;
 	color: #fff;
@@ -246,6 +271,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 		background: $blue;
 		color: #fff;
 	}
+}
+
+input[type="submit"] {
+	border: none;
+	font: normal 400 .9rem/1.2em "mont", sans-serif;
+	text-transform: uppercase;
 }
 
 // Link
@@ -263,6 +294,25 @@ h1, h2, h3, h4, h5, h6, p, a {
 			color: #fff;
 			border-color: $blue;
 		}
+}
+
+// Text Input
+input[type="text"],
+textarea {
+	font: normal 400 .9rem/1.2em "mont", sans-serif;
+	border: none;
+	box-shadow: none;
+	margin-top: 10px;
+	
+	&:hover {
+		border: none;
+		box-shadow: none;
+		background: #f9f9f9;
+	}
+	&:focus {
+		border: none;
+		box-shadow: none;
+	}
 }
 
 
@@ -288,6 +338,13 @@ header {
 	.button {
 		padding: 10px 30px;
 		margin-left: 50px;
+	}
+	.header-type {
+		letter-spacing: 0;
+	}
+	.smaller-type {
+		font-size: .9rem;
+		margin-bottom: 10px;
 	}
 }
 
@@ -326,6 +383,7 @@ footer {
 			top: 0;
 			left: 0;
 		transform: translateY(-75%);
+		z-index: 100;
 	}
 	.footer-logo {
 		overflow: hidden;
@@ -363,6 +421,9 @@ footer {
 .homepage-about {
 	h1 {
 		margin-bottom: 25px;
+	}
+	.icon {
+		max-height: 100px;
 	}
 }
 .why-carribean {
@@ -404,7 +465,36 @@ footer {
 // Guide
 
 .bubble {
-	padding: 40px;
+	background: rgba(104, 109, 179, 0.5);
+	position: relative;
+	width: 35vw;
+	height: 35vw;
+	border-radius: 10000px;
+	
+	.bubble-one,
+	.bubble-two {
+		position: absolute;
+			right: -20%;
+			top: 5%;
+		height: 5vw;
+		width: 5vw;
+		background: rgba(104, 109, 179, 0.5);
+		border-radius: 1000px;
+	}
+	.bubble-two {
+		height: 8vw;
+		width: 8vw;
+		left: 5%;
+		bottom: -6%;
+		top: auto;
+	}
+	.bubble-content {
+		position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 80%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 // Locations
@@ -471,6 +561,301 @@ footer {
 // -------- Destinations -------- //
 .destinations-banner {
 	h1 {
+		margin-bottom: 30px;
+	}
+}
+.attraction {
+	h2 {
+		margin-bottom: 40px;
+	}
+}
+.resort {
+	h1 {
+		padding-bottom: 20px;
+	}
+	.cell {
+		margin-top: 70px;
+		background: #fff;
+	}
+	.content {
+		padding: 35px;
+	}
+	.bg-image {
+		height: 250px;
+	}
+}
+.book-a-flight-cta {
+	h2 {
+		margin-bottom: 30px;
+	}
+}
+
+// -------- Difference -------- //
+.differences,
+.activity {
+	.feature {
+		margin-bottom: 120px;
+		padding-left: 70px;
+		position: relative;
+		
+		.feature-container {
+			background: #fff;
+			padding: 90px 70px;
+		}
+		
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 70px;
+		}
+		.icon {
+			position: absolute;
+				top: 0;
+				left: 10px;
+			height: 100px;
+			transform: translate(-0%, -50%);
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.differences {
+		.feature {
+			padding-left: 0px;
+		}
+	}
+} 
+
+.customer-testimonial {
+	position: relative;
+	padding: 200px 0px !important;
+	
+	.testimonial {
+		position: relative;
+		z-index: 2;
+		background: $light-grey; 
+		padding: 90px;
+		border-radius: 70px;
+		min-height: 280px;
+		
+		.sun {
+			width: 100px;
+			position: absolute;
+				bottom: -30%;
+				left: 15%;
+		}
+		h2 {
+			font-size: 1.3rem;
+			margin-bottom: 30px;
+		}
+	}
+	
+	.island {
+		position: absolute;
+			left: 5%;
+			bottom: 0;
+	}
+	.postage {
+		position: absolute;
+			top: -12%;
+			right: 0;
+		width: 50%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.customer-testimonial {
+		.testimonial {
+			.sun {
+				left: 50%;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.customer-testimonial {
+		.testimonial {
+			.sun {
+				left: 70%;
+			}
+		}
+	}
+}
+
+.difference-cta {
+	h2 {
+		text-shadow: 0px 0px 1px #444;
+	}
+	.grid-x {
+		min-height: 250px;
+	}
+}
+
+// -------- Contact -------- //
+.contact-form {
+	position: relative;
+	padding-bottom: 350px !important;
+	
+	a {
+		color: #000;
+	}
+	h3 {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.header {
+		position: relative;
+		
+		.plane {
+			position: absolute;
+				bottom: 00%;
+				left: 0;
+		}
+	}
+	.contact-info {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.island-one {
+		width: 180px;
+		position: absolute;
+			left: 10%;
+			bottom: 0;
+	}
+	.island-two {
+		width: 400px;
+		position: absolute;
+			right: 10%;
+			bottom: 0;
+		z-index: 1;
+	}
+	.island-three {
+		width: 250px;
+		position: absolute;
+			right: 28%;
+			bottom: 0;
+		z-index: 2;
+	}
+}
+
+// -------- FAQ -------- //
+.faqs {
+	padding-top: 200px;
+	position: relative;
+	padding-bottom: 400px !important;
+	
+	.island-one {
+		position: absolute;
+			left: 20%;
+			bottom: 0; 
+	}
+	.island-two {
+		position: absolute;
+			right: 15%;
+			bottom: 0;
+	}
+	h1 {
+		padding-bottom: 20px;
+		margin-bottom: 70px;
+		font-size: 2.2rem;
+	}
+	
+	article {
+		position: relative;
+	}
+	.cloud-one {
+		position: absolute;
+			left: -42%;
+			top: 50%;
+	}
+	.cloud-two {
+		position: absolute;
+			right: -42%;
+			bottom: 0%;
+	}
+	.cloud-three {
+		position: absolute;
+			left: -30%;
+			bottom: 0%;
+	}
+}
+
+.dropdown {
+	cursor: pointer;
+	
+	h2 {
+		font-size: 1.5rem;
+	}
+	.dropdown-header {
+		margin-bottom: 0px;
+		
+		.open.icon {
+			display: none;
+		}
+		.closed.icon {
+			display: block;
+		}
+		.icon-container {
+			max-width: 35px;
+		}
+	}
+	.dropdown-content {
+		max-height: 0px;
+		overflow: hidden;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		
+		transition: all .5s ease-out;
+	}
+	
+	&.is-open {
+		.dropdown-header {
+			.open.icon {
+				display: block;
+			}
+			.closed.icon {
+				display: none;
+			}
+		}
+		
+		.dropdown-content {
+			max-height: 200px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.faq-banner {
+	position: relative;
+	
+	.plane {
+		position: absolute;
+			left: 5%;
+			bottom: 0;
+	}
+	
+	.sub-nav {
+		margin-top: 50px;
+		
+		.cell {
+			border: 1px solid $blue;
+			color: $blue;
+			padding: 20px 30px;
+			border-left: 0px;
+			border-radius: 1px solid $blue;
+			
+			&:first-of-type {
+				border-left: 1px solid $blue;
+			}
+			a {
+				color: $blue;
+			}
+		}
+	}
+}
+
+.faq-contact-cta {
+	h2 {
 		margin-bottom: 30px;
 	}
 }

@@ -1,7 +1,7 @@
 /*
 	
 	
-	Fonts for Offsite
+	Fonts for Carribean Blue
 	
 	
 */
@@ -13,6 +13,16 @@
 @font-face {
   font-family: "mont";
   src: url("../fonts/Montserrat-Bold.otf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/CircularStd-Book.otf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/CircularStd-Bold.otf");
   font-weight: 700; }
 
 /*# sourceMappingURL=fonts.css.map */

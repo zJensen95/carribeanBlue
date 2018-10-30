@@ -1,0 +1,61 @@
+{% extends "_layout" %}
+{% block content %}
+
+<section class="contact-form light-grey">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x align-justify">
+			
+			<div class="small-12 medium-4 cell header">
+				<h1 class="blue">Get In Touch</h1>
+				<p class="blue">Have a question? Feel free to contact us!</p>
+				
+				<div class="grid-x grid-margin-x grid-padding-x align-left align-bottom contact-info">
+					<div class="shrink cell text-center">
+						<img src="assets/images/phone.png" />
+						<a href="tel:555-555-5555"><h3>555.555.5555</h3></a>
+					</div>
+					<div class="shrink cell text-center">
+						<img src="assets/images/email.png" />
+						<a href="mailto:info@caribbeanblue.com"><h3>Email</h3></a>
+					</div>
+				</div>
+				
+				<img src="assets/images/plane.png" class="plane" />
+			</div>
+			<div class="small-12 medium-7 cell">
+				<form>
+					
+					<div class="grid-x grid-margin-x">
+						<div class="small-12 medium-6 cell">
+							<h3 class="reg no-margin">First Name</h3>
+							<input type="text" />
+						</div>
+						<div class="small-12 medium-6 cell">
+							<h3 class="reg no-margin">Last Name</h3>
+							<input type="text" />
+						</div>
+						<div class="small-12 cell">
+							<h3 class="reg">Subject</h3>
+							<input type="text" />
+						</div>
+						<div class="small-12 cell">
+							<h3 class="reg">Message</h3>
+							<textarea rows="10"></textarea>
+						</div>
+						<div class="small-12 cell">
+							<input type="submit" /> 
+						</div>
+					</div>
+					
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	
+	<img class="island-one" src="assets/images/pig-island.png" />
+	<img class="island-three" src="assets/images/treasure-island.png" />
+	<img class="island-two" src="assets/images/beach-island.png" />
+</section>
+
+{% endblock %}

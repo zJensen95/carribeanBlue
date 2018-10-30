@@ -1,13 +1,13 @@
 /*
 	
 	
-	Fonts for Offsite
+	Fonts for Carribean Blue
 	
 	
 */
 
 
-// -------- Gotham -------- //
+// -------- Montserrat -------- //
 
 // Regular
 @font-face {
@@ -20,5 +20,22 @@
 @font-face {
 	font-family: "mont";
 	src: url('../fonts/Montserrat-Bold.otf');
+	font-weight: 700;
+}
+
+
+// --------- Circular -------- //
+
+// Regular
+@font-face {
+	font-family: "Circular";
+	src: url('../fonts/CircularStd-Book.otf');
+	font-weight: 400;
+}
+
+// Bold
+@font-face {
+	font-family: "Circular";
+	src: url('../fonts/CircularStd-Bold.otf');
 	font-weight: 700;
 }
