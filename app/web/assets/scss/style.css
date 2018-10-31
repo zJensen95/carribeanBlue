@@ -16,12 +16,23 @@
 	
 */
 .grid-container {
-  max-width: 80em; }
+  max-width: 100em;
+  padding: 0px 8vw; }
+
+.blue-gradient-right {
+  position: relative; }
+  .blue-gradient-right .blue-gradient {
+    background: linear-gradient(to right, rgba(122, 222, 219, 0) 40%, rgba(121, 222, 219, 0.65) 70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
 
 .no-margin {
   margin: 0px !important; }
 
-.three-cards h2 {
+.three-cards h2, .three-cards h1.header-two, .three-cards h3.header-two, .three-cards h4.header-two, .three-cards h5.header-two, .three-cards h6.header-two, .three-cards p.header-two, .three-cards a.header-two {
   padding-top: 120px;
   padding-bottom: 120px; }
 
@@ -95,6 +106,8 @@ section {
     padding-top: 120px; }
   section.no-padding {
     padding: 0px; }
+  section.no-padding-bot {
+    padding-bottom: 0px; }
   section.light-grey {
     background: #eee; }
   section.blue {
@@ -109,14 +122,14 @@ div.blue {
 div.teal {
   background: #78ddda; }
 
-h1 {
+h1, h1.header-one, h2.header-one, h3.header-one, h4.header-one, h5.header-one, h6.header-one, p.header-one, a.header-one {
   font: normal 700 3rem/1.3em "mont", sans-serif;
   letter-spacing: .025em; }
 
-h2 {
+h2, h1.header-two, h2.header-two, h3.header-two, h4.header-two, h5.header-two, h6.header-two, p.header-two, a.header-two {
   font: normal 700 1.75rem/1.3em "mont", sans-serif; }
 
-h3 {
+h3, h1.header-three, h2.header-three, h3.header-three, h4.header-three, h5.header-three, h6.header-three, p.header-three, a.header-three {
   font: normal 700 .9rem/1.2em "mont", sans-serif;
   text-transform: uppercase;
   letter-spacing: .1em; }
@@ -130,39 +143,41 @@ a {
   text-transform: uppercase;
   letter-spacing: .1em; }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h1.header-one, h2.header-one, h3.header-one, h4.header-one, h5.header-one, h6.header-one, p.header-one, a.header-one, h2, h1.header-two, h2.header-two, h3.header-two, h4.header-two, h5.header-two, h6.header-two, p.header-two, a.header-two, h3, h1.header-three, h2.header-three, h3.header-three, h4.header-three, h5.header-three, h6.header-three, p.header-three, a.header-three, h4, h5, h6, p, a {
   margin: 0px; }
-  h1.underline, h2.underline, h3.underline, h4.underline, h5.underline, h6.underline, p.underline, a.underline {
+  h1.underline, h2.underline.header-one, h3.underline.header-one, h4.underline.header-one, h5.underline.header-one, h6.underline.header-one, p.underline.header-one, a.underline.header-one, h2.underline, h1.underline.header-two, h3.underline.header-two, h4.underline.header-two, h5.underline.header-two, h6.underline.header-two, p.underline.header-two, a.underline.header-two, h3.underline, h1.underline.header-three, h2.underline.header-three, h4.underline.header-three, h5.underline.header-three, h6.underline.header-three, p.underline.header-three, a.underline.header-three, h4.underline, h5.underline, h6.underline, p.underline, a.underline {
     padding-bottom: 40px;
     border-bottom: 2px solid #000; }
-  h1.lowercase, h2.lowercase, h3.lowercase, h4.lowercase, h5.lowercase, h6.lowercase, p.lowercase, a.lowercase {
+  h1.lowercase, h2.lowercase.header-one, h3.lowercase.header-one, h4.lowercase.header-one, h5.lowercase.header-one, h6.lowercase.header-one, p.lowercase.header-one, a.lowercase.header-one, h2.lowercase, h1.lowercase.header-two, h3.lowercase.header-two, h4.lowercase.header-two, h5.lowercase.header-two, h6.lowercase.header-two, p.lowercase.header-two, a.lowercase.header-two, h3.lowercase, h1.lowercase.header-three, h2.lowercase.header-three, h4.lowercase.header-three, h5.lowercase.header-three, h6.lowercase.header-three, p.lowercase.header-three, a.lowercase.header-three, h4.lowercase, h5.lowercase, h6.lowercase, p.lowercase, a.lowercase {
     text-transform: none; }
-  h1.uppercase, h2.uppercase, h3.uppercase, h4.uppercase, h5.uppercase, h6.uppercase, p.uppercase, a.uppercase {
+  h1.uppercase, h2.uppercase.header-one, h3.uppercase.header-one, h4.uppercase.header-one, h5.uppercase.header-one, h6.uppercase.header-one, p.uppercase.header-one, a.uppercase.header-one, h2.uppercase, h1.uppercase.header-two, h3.uppercase.header-two, h4.uppercase.header-two, h5.uppercase.header-two, h6.uppercase.header-two, p.uppercase.header-two, a.uppercase.header-two, h3.uppercase, h1.uppercase.header-three, h2.uppercase.header-three, h4.uppercase.header-three, h5.uppercase.header-three, h6.uppercase.header-three, p.uppercase.header-three, a.uppercase.header-three, h4.uppercase, h5.uppercase, h6.uppercase, p.uppercase, a.uppercase {
     text-transform: uppercase; }
-  h1 .uppercase, h2 .uppercase, h3 .uppercase, h4 .uppercase, h5 .uppercase, h6 .uppercase, p .uppercase, a .uppercase {
+  h1 .uppercase, h2.header-one .uppercase, h3.header-one .uppercase, h4.header-one .uppercase, h5.header-one .uppercase, h6.header-one .uppercase, p.header-one .uppercase, a.header-one .uppercase, h2 .uppercase, h1.header-two .uppercase, h3.header-two .uppercase, h4.header-two .uppercase, h5.header-two .uppercase, h6.header-two .uppercase, p.header-two .uppercase, a.header-two .uppercase, h3 .uppercase, h1.header-three .uppercase, h2.header-three .uppercase, h4.header-three .uppercase, h5.header-three .uppercase, h6.header-three .uppercase, p.header-three .uppercase, a.header-three .uppercase, h4 .uppercase, h5 .uppercase, h6 .uppercase, p .uppercase, a .uppercase {
     text-transform: uppercase; }
-  h1.teal, h2.teal, h3.teal, h4.teal, h5.teal, h6.teal, p.teal, a.teal {
+  h1.teal, h2.teal.header-one, h3.teal.header-one, h4.teal.header-one, h5.teal.header-one, h6.teal.header-one, p.teal.header-one, a.teal.header-one, h2.teal, h1.teal.header-two, h3.teal.header-two, h4.teal.header-two, h5.teal.header-two, h6.teal.header-two, p.teal.header-two, a.teal.header-two, h3.teal, h1.teal.header-three, h2.teal.header-three, h4.teal.header-three, h5.teal.header-three, h6.teal.header-three, p.teal.header-three, a.teal.header-three, h4.teal, h5.teal, h6.teal, p.teal, a.teal {
     color: #78ddda;
     border-color: #78ddda; }
-  h1 .teal, h2 .teal, h3 .teal, h4 .teal, h5 .teal, h6 .teal, p .teal, a .teal {
+  h1 .teal, h2.header-one .teal, h3.header-one .teal, h4.header-one .teal, h5.header-one .teal, h6.header-one .teal, p.header-one .teal, a.header-one .teal, h2 .teal, h1.header-two .teal, h3.header-two .teal, h4.header-two .teal, h5.header-two .teal, h6.header-two .teal, p.header-two .teal, a.header-two .teal, h3 .teal, h1.header-three .teal, h2.header-three .teal, h4.header-three .teal, h5.header-three .teal, h6.header-three .teal, p.header-three .teal, a.header-three .teal, h4 .teal, h5 .teal, h6 .teal, p .teal, a .teal {
     color: #78ddda; }
-  h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue, p.blue, a.blue {
+  h1.blue, h2.blue.header-one, h3.blue.header-one, h4.blue.header-one, h5.blue.header-one, h6.blue.header-one, p.blue.header-one, a.blue.header-one, h2.blue, h1.blue.header-two, h3.blue.header-two, h4.blue.header-two, h5.blue.header-two, h6.blue.header-two, p.blue.header-two, a.blue.header-two, h3.blue, h1.blue.header-three, h2.blue.header-three, h4.blue.header-three, h5.blue.header-three, h6.blue.header-three, p.blue.header-three, a.blue.header-three, h4.blue, h5.blue, h6.blue, p.blue, a.blue {
     color: #3875FC;
     border-color: #3875FC; }
-  h1 .blue, h2 .blue, h3 .blue, h4 .blue, h5 .blue, h6 .blue, p .blue, a .blue {
+  h1 .blue, h2.header-one .blue, h3.header-one .blue, h4.header-one .blue, h5.header-one .blue, h6.header-one .blue, p.header-one .blue, a.header-one .blue, h2 .blue, h1.header-two .blue, h3.header-two .blue, h4.header-two .blue, h5.header-two .blue, h6.header-two .blue, p.header-two .blue, a.header-two .blue, h3 .blue, h1.header-three .blue, h2.header-three .blue, h4.header-three .blue, h5.header-three .blue, h6.header-three .blue, p.header-three .blue, a.header-three .blue, h4 .blue, h5 .blue, h6 .blue, p .blue, a .blue {
     color: #3875FC; }
-  h1.white, h2.white, h3.white, h4.white, h5.white, h6.white, p.white, a.white {
+  h1.white, h2.white.header-one, h3.white.header-one, h4.white.header-one, h5.white.header-one, h6.white.header-one, p.white.header-one, a.white.header-one, h2.white, h1.white.header-two, h3.white.header-two, h4.white.header-two, h5.white.header-two, h6.white.header-two, p.white.header-two, a.white.header-two, h3.white, h1.white.header-three, h2.white.header-three, h4.white.header-three, h5.white.header-three, h6.white.header-three, p.white.header-three, a.white.header-three, h4.white, h5.white, h6.white, p.white, a.white {
     color: #fff;
     border-color: #fff; }
-  h1 .white, h2 .white, h3 .white, h4 .white, h5 .white, h6 .white, p .white, a .white {
+  h1 .white, h2.header-one .white, h3.header-one .white, h4.header-one .white, h5.header-one .white, h6.header-one .white, p.header-one .white, a.header-one .white, h2 .white, h1.header-two .white, h3.header-two .white, h4.header-two .white, h5.header-two .white, h6.header-two .white, p.header-two .white, a.header-two .white, h3 .white, h1.header-three .white, h2.header-three .white, h4.header-three .white, h5.header-three .white, h6.header-three .white, p.header-three .white, a.header-three .white, h4 .white, h5 .white, h6 .white, p .white, a .white {
     color: #fff; }
-  h1.reg, h2.reg, h3.reg, h4.reg, h5.reg, h6.reg, p.reg, a.reg {
+  h1.reg, h2.reg.header-one, h3.reg.header-one, h4.reg.header-one, h5.reg.header-one, h6.reg.header-one, p.reg.header-one, a.reg.header-one, h2.reg, h1.reg.header-two, h3.reg.header-two, h4.reg.header-two, h5.reg.header-two, h6.reg.header-two, p.reg.header-two, a.reg.header-two, h3.reg, h1.reg.header-three, h2.reg.header-three, h4.reg.header-three, h5.reg.header-three, h6.reg.header-three, p.reg.header-three, a.reg.header-three, h4.reg, h5.reg, h6.reg, p.reg, a.reg {
     font-weight: 400; }
-  h1 .reg, h2 .reg, h3 .reg, h4 .reg, h5 .reg, h6 .reg, p .reg, a .reg {
+  h1 .reg, h2.header-one .reg, h3.header-one .reg, h4.header-one .reg, h5.header-one .reg, h6.header-one .reg, p.header-one .reg, a.header-one .reg, h2 .reg, h1.header-two .reg, h3.header-two .reg, h4.header-two .reg, h5.header-two .reg, h6.header-two .reg, p.header-two .reg, a.header-two .reg, h3 .reg, h1.header-three .reg, h2.header-three .reg, h4.header-three .reg, h5.header-three .reg, h6.header-three .reg, p.header-three .reg, a.header-three .reg, h4 .reg, h5 .reg, h6 .reg, p .reg, a .reg {
     font-weight: 400; }
-  h1.bold, h2.bold, h3.bold, h4.bold, h5.bold, h6.bold, p.bold, a.bold {
+  h1.bold, h2.bold.header-one, h3.bold.header-one, h4.bold.header-one, h5.bold.header-one, h6.bold.header-one, p.bold.header-one, a.bold.header-one, h2.bold, h1.bold.header-two, h3.bold.header-two, h4.bold.header-two, h5.bold.header-two, h6.bold.header-two, p.bold.header-two, a.bold.header-two, h3.bold, h1.bold.header-three, h2.bold.header-three, h4.bold.header-three, h5.bold.header-three, h6.bold.header-three, p.bold.header-three, a.bold.header-three, h4.bold, h5.bold, h6.bold, p.bold, a.bold {
     font-weight: 700; }
-  h1.circular, h2.circular, h3.circular, h4.circular, h5.circular, h6.circular, p.circular, a.circular {
+  h1 .bold, h2.header-one .bold, h3.header-one .bold, h4.header-one .bold, h5.header-one .bold, h6.header-one .bold, p.header-one .bold, a.header-one .bold, h2 .bold, h1.header-two .bold, h3.header-two .bold, h4.header-two .bold, h5.header-two .bold, h6.header-two .bold, p.header-two .bold, a.header-two .bold, h3 .bold, h1.header-three .bold, h2.header-three .bold, h4.header-three .bold, h5.header-three .bold, h6.header-three .bold, p.header-three .bold, a.header-three .bold, h4 .bold, h5 .bold, h6 .bold, p .bold, a .bold {
+    font-weight: 700; }
+  h1.circular, h2.circular.header-one, h3.circular.header-one, h4.circular.header-one, h5.circular.header-one, h6.circular.header-one, p.circular.header-one, a.circular.header-one, h2.circular, h1.circular.header-two, h3.circular.header-two, h4.circular.header-two, h5.circular.header-two, h6.circular.header-two, p.circular.header-two, a.circular.header-two, h3.circular, h1.circular.header-three, h2.circular.header-three, h4.circular.header-three, h5.circular.header-three, h6.circular.header-three, p.circular.header-three, a.circular.header-three, h4.circular, h5.circular, h6.circular, p.circular, a.circular {
     font-family: "Circular"; }
 
 .button,
@@ -198,17 +213,20 @@ input[type="submit"] {
     border-color: #3875FC; }
 
 input[type="text"],
+input[type="date"],
 textarea {
   font: normal 400 .9rem/1.2em "mont", sans-serif;
   border: none;
   box-shadow: none;
   margin-top: 10px; }
   input[type="text"]:hover,
+  input[type="date"]:hover,
   textarea:hover {
     border: none;
     box-shadow: none;
     background: #f9f9f9; }
   input[type="text"]:focus,
+  input[type="date"]:focus,
   textarea:focus {
     border: none;
     box-shadow: none; }
@@ -218,12 +236,15 @@ header {
   padding: 25px 70px; }
   header .logo {
     width: 75px; }
+  header .type-logo {
+    width: 20vw;
+    min-width: 250px; }
   header .link {
     color: #fff;
     margin-left: 50px;
     border: none;
     padding: 0px; }
-  header h3 {
+  header h3, header h1.header-three, header h2.header-three, header h3.header-three, header h4.header-three, header h5.header-three, header h6.header-three, header p.header-three, header a.header-three {
     margin-left: 30px; }
   header .button {
     padding: 10px 30px;
@@ -248,7 +269,7 @@ footer {
     padding-left: 60px;
     padding-top: 20px;
     padding-bottom: 30px; }
-    footer .footer-nav h3 {
+    footer .footer-nav h3, footer .footer-nav h1.header-three, footer .footer-nav h2.header-three, footer .footer-nav h4.header-three, footer .footer-nav h5.header-three, footer .footer-nav h6.header-three, footer .footer-nav p.header-three, footer .footer-nav a.header-three {
       margin-bottom: 25px; }
     footer .footer-nav .head {
       margin-bottom: 70px; }
@@ -269,19 +290,30 @@ footer {
     footer .footer-logo img {
       transform: translate(10%, 5%); }
 
+@media (max-width: 640px) {
+  footer .footer-header {
+    padding-right: 0px;
+    border: none; }
+  footer .footer-nav {
+    padding-left: 0px; }
+    footer .footer-nav .head {
+      margin-bottom: 15px; } }
+
 .banner {
   padding: 30px; }
   .banner .grid-x {
-    min-height: 450px; }
+    min-height: 70vh;
+    max-height: 80vh; }
   .banner .homepage .grid-x {
-    min-height: 450px; }
+    min-height: 70vh;
+    max-height: 80vh; }
 
 /*
 	
 	Pages
 	
 */
-.homepage-about h1 {
+.homepage-about h1, .homepage-about h2.header-one, .homepage-about h3.header-one, .homepage-about h4.header-one, .homepage-about h5.header-one, .homepage-about h6.header-one, .homepage-about p.header-one, .homepage-about a.header-one {
   margin-bottom: 25px; }
 
 .homepage-about .icon {
@@ -306,13 +338,56 @@ footer {
 
 .homepage-book input,
 .homepage-book select {
-  margin-top: 50px; }
+  margin-top: 50px;
+  color: #000;
+  padding-left: 0px;
+  border: none;
+  border-bottom: 2px solid #444;
+  background: none; }
+  .homepage-book input::placeholder,
+  .homepage-book select::placeholder {
+    color: #000; }
+  .homepage-book input:hover,
+  .homepage-book select:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #aaa; }
+  .homepage-book input:focus,
+  .homepage-book select:focus {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #000; }
+
+.homepage-book .date-cell {
+  position: relative; }
+  .homepage-book .date-cell .icon {
+    position: absolute;
+    width: 20px;
+    left: 0;
+    bottom: 1.8rem; }
+
+.homepage-book select:after {
+  display: block;
+  content: 'Test';
+  width: 20px; }
+
+.homepage-book input[type="date"] {
+  position: relative; }
+  .homepage-book input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #000;
+    margin-right: 20px; }
+  .homepage-book input[type="date"]:focus:before,
+  .homepage-book input[type="date"]:valid:before {
+    content: ''; }
 
 .homepage-book .button {
   margin-top: 30px; }
 
 .bubble {
-  background: rgba(104, 109, 179, 0.5);
+  background: rgba(56, 119, 253, 0.5);
   position: relative;
   width: 35vw;
   height: 35vw;
@@ -324,7 +399,7 @@ footer {
     top: 5%;
     height: 5vw;
     width: 5vw;
-    background: rgba(104, 109, 179, 0.5);
+    background: rgba(56, 119, 253, 0.5);
     border-radius: 1000px; }
   .bubble .bubble-two {
     height: 8vw;
@@ -339,7 +414,7 @@ footer {
     width: 80%;
     transform: translate(-50%, -50%); }
 
-.homepage-locations h2 {
+.homepage-locations h2, .homepage-locations h1.header-two, .homepage-locations h3.header-two, .homepage-locations h4.header-two, .homepage-locations h5.header-two, .homepage-locations h6.header-two, .homepage-locations p.header-two, .homepage-locations a.header-two {
   padding-top: 120px;
   padding-bottom: 120px; }
 
@@ -354,37 +429,106 @@ footer {
 .about-our-story .teal {
   margin-right: 20px; }
 
-.about-our-story h1 {
+.about-our-story h1, .about-our-story h2.header-one, .about-our-story h3.header-one, .about-our-story h4.header-one, .about-our-story h5.header-one, .about-our-story h6.header-one, .about-our-story p.header-one, .about-our-story a.header-one {
   padding-bottom: 10px;
   margin-bottom: 60px; }
 
-.about-our-crew .team-member {
-  margin-top: 50px; }
-  .about-our-crew .team-member h2 {
-    margin-bottom: 10px; }
+.about-our-story p {
+  padding-right: 120px;
+  margin-bottom: 20px; }
 
-.about-our-crew .headshot {
-  margin-bottom: 20px;
-  background: #444;
-  height: 200px;
-  width: 200px;
-  border-radius: 10000px; }
+.timeline .cell {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.about-our-crew {
+  position: relative; }
+  .about-our-crew .team-member {
+    margin-top: 50px; }
+    .about-our-crew .team-member h2, .about-our-crew .team-member h1.header-two, .about-our-crew .team-member h3.header-two, .about-our-crew .team-member h4.header-two, .about-our-crew .team-member h5.header-two, .about-our-crew .team-member h6.header-two, .about-our-crew .team-member p.header-two, .about-our-crew .team-member a.header-two {
+      margin-bottom: 10px; }
+  .about-our-crew .headshot {
+    margin-bottom: 20px;
+    background: #444;
+    height: 200px;
+    width: 200px;
+    border-radius: 10000px; }
+  .about-our-crew .bubble-one,
+  .about-our-crew .bubble-two,
+  .about-our-crew .bubble-three,
+  .about-our-crew .bubble-four {
+    position: absolute;
+    background: rgba(56, 119, 253, 0.5);
+    border-radius: 1000px;
+    top: -6vw;
+    left: -7vw;
+    height: 20vw;
+    width: 20vw; }
+  .about-our-crew .bubble-two {
+    height: 4vw;
+    width: 4vw;
+    top: 12vw;
+    left: -2vw; }
+  .about-our-crew .bubble-three {
+    height: 4vw;
+    width: 4vw;
+    top: 14vw;
+    left: 11vw; }
+  .about-our-crew .bubble-four {
+    height: 3vw;
+    width: 3vw;
+    top: -7vw;
+    left: 14vw; }
+  .about-our-crew h3.underline, .about-our-crew h1.underline.header-three, .about-our-crew h2.underline.header-three, .about-our-crew h4.underline.header-three, .about-our-crew h5.underline.header-three, .about-our-crew h6.underline.header-three, .about-our-crew p.underline.header-three, .about-our-crew a.underline.header-three {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 10px; }
+  .about-our-crew .category {
+    margin-bottom: 30px; }
+  .about-our-crew .header {
+    margin-bottom: 50px; }
+
+@media (max-width: 640px) {
+  .about-our-crew .info {
+    margin-bottom: 50px; } }
 
 .about-careers {
   position: relative; }
   .about-careers .grid-container {
     position: relative;
     z-index: 2; }
-  .about-careers h2 {
+  .about-careers h2, .about-careers h1.header-two, .about-careers h3.header-two, .about-careers h4.header-two, .about-careers h5.header-two, .about-careers h6.header-two, .about-careers p.header-two, .about-careers a.header-two {
     margin-bottom: 20px; }
 
-.destinations-banner h1 {
+.destinations-banner h1, .destinations-banner h2.header-one, .destinations-banner h3.header-one, .destinations-banner h4.header-one, .destinations-banner h5.header-one, .destinations-banner h6.header-one, .destinations-banner p.header-one, .destinations-banner a.header-one {
   margin-bottom: 30px; }
 
-.attraction h2 {
+.attraction h2, .attraction h1.header-two, .attraction h3.header-two, .attraction h4.header-two, .attraction h5.header-two, .attraction h6.header-two, .attraction p.header-two, .attraction a.header-two {
   margin-bottom: 40px; }
 
-.resort h1 {
+.attraction .left,
+.attraction .right {
+  margin-bottom: 100px; }
+  .attraction .left:last-of-type,
+  .attraction .right:last-of-type {
+    margin-bottom: 0px; }
+
+.attraction .left .content {
+  padding-right: 25px; }
+
+.attraction .left .image {
+  padding-left: 25px; }
+
+.attraction .right .content {
+  padding-left: 25px; }
+
+.attraction .right .image {
+  padding-right: 25px; }
+
+.resort h1, .resort h2.header-one, .resort h3.header-one, .resort h4.header-one, .resort h5.header-one, .resort h6.header-one, .resort p.header-one, .resort a.header-one {
+  margin-bottom: 70px; }
+
+.resort h2, .resort h1.header-two, .resort h3.header-two, .resort h4.header-two, .resort h5.header-two, .resort h6.header-two, .resort p.header-two, .resort a.header-two {
   padding-bottom: 20px; }
 
 .resort .cell {
@@ -393,12 +537,50 @@ footer {
 
 .resort .content {
   padding: 35px; }
+  .resort .content p {
+    margin-bottom: 20px; }
 
 .resort .bg-image {
   height: 250px; }
 
-.book-a-flight-cta h2 {
+.book-a-flight-cta h2, .book-a-flight-cta h1.header-two, .book-a-flight-cta h3.header-two, .book-a-flight-cta h4.header-two, .book-a-flight-cta h5.header-two, .book-a-flight-cta h6.header-two, .book-a-flight-cta p.header-two, .book-a-flight-cta a.header-two {
   margin-bottom: 30px; }
+
+.activity h2, .activity h1.header-two, .activity h3.header-two, .activity h4.header-two, .activity h5.header-two, .activity h6.header-two, .activity p.header-two, .activity a.header-two {
+  margin-bottom: 120px;
+  padding-bottom: 20px; }
+
+.inner-destination {
+  position: relative; }
+  .inner-destination .bubble-one,
+  .inner-destination .bubble-two,
+  .inner-destination .bubble-three,
+  .inner-destination .bubble-four {
+    background: rgba(56, 119, 253, 0.5);
+    mix-blend-mode: multiply;
+    border-radius: 1000px;
+    height: 6vw;
+    width: 6vw;
+    position: absolute;
+    bottom: -3vw;
+    left: 10vw; }
+  .inner-destination .bubble-two {
+    height: 3vw;
+    width: 3vw;
+    bottom: -6vw;
+    left: 16vw; }
+  .inner-destination .bubble-three {
+    height: 3.5vw;
+    width: 3.5vw;
+    bottom: -5vw;
+    right: 16vw;
+    left: auto; }
+  .inner-destination .bubble-four {
+    height: 5vw;
+    width: 5vw;
+    bottom: -3vw;
+    right: 10vw;
+    left: auto; }
 
 .differences .feature,
 .activity .feature {
@@ -410,7 +592,14 @@ footer {
     background: #fff;
     padding: 90px 70px; }
   .differences .feature h2,
-  .activity .feature h2 {
+  .differences .feature h1.header-two,
+  .differences .feature h3.header-two,
+  .differences .feature h4.header-two,
+  .differences .feature h5.header-two,
+  .differences .feature h6.header-two,
+  .differences .feature p.header-two,
+  .differences .feature a.header-two,
+  .activity .feature h2, .activity .feature h1.header-two, .activity .feature h3.header-two, .activity .feature h4.header-two, .activity .feature h5.header-two, .activity .feature h6.header-two, .activity .feature p.header-two, .activity .feature a.header-two {
     font-size: 2rem;
     margin-bottom: 70px; }
   .differences .feature .icon,
@@ -440,7 +629,7 @@ footer {
       position: absolute;
       bottom: -30%;
       left: 15%; }
-    .customer-testimonial .testimonial h2 {
+    .customer-testimonial .testimonial h2, .customer-testimonial .testimonial h1.header-two, .customer-testimonial .testimonial h3.header-two, .customer-testimonial .testimonial h4.header-two, .customer-testimonial .testimonial h5.header-two, .customer-testimonial .testimonial h6.header-two, .customer-testimonial .testimonial p.header-two, .customer-testimonial .testimonial a.header-two {
       font-size: 1.3rem;
       margin-bottom: 30px; }
   .customer-testimonial .island {
@@ -461,7 +650,7 @@ footer {
   .customer-testimonial .testimonial .sun {
     left: 70%; } }
 
-.difference-cta h2 {
+.difference-cta h2, .difference-cta h1.header-two, .difference-cta h3.header-two, .difference-cta h4.header-two, .difference-cta h5.header-two, .difference-cta h6.header-two, .difference-cta p.header-two, .difference-cta a.header-two {
   text-shadow: 0px 0px 1px #444; }
 
 .difference-cta .grid-x {
@@ -472,7 +661,7 @@ footer {
   padding-bottom: 350px !important; }
   .contact-form a {
     color: #000; }
-  .contact-form h3 {
+  .contact-form h3, .contact-form h1.header-three, .contact-form h2.header-three, .contact-form h4.header-three, .contact-form h5.header-three, .contact-form h6.header-three, .contact-form p.header-three, .contact-form a.header-three {
     margin-top: 30px;
     margin-bottom: 20px; }
   .contact-form .header {
@@ -514,7 +703,7 @@ footer {
     position: absolute;
     right: 15%;
     bottom: 0; }
-  .faqs h1 {
+  .faqs h1, .faqs h2.header-one, .faqs h3.header-one, .faqs h4.header-one, .faqs h5.header-one, .faqs h6.header-one, .faqs p.header-one, .faqs a.header-one {
     padding-bottom: 20px;
     margin-bottom: 70px;
     font-size: 2.2rem; }
@@ -535,7 +724,7 @@ footer {
 
 .dropdown {
   cursor: pointer; }
-  .dropdown h2 {
+  .dropdown h2, .dropdown h1.header-two, .dropdown h3.header-two, .dropdown h4.header-two, .dropdown h5.header-two, .dropdown h6.header-two, .dropdown p.header-two, .dropdown a.header-two {
     font-size: 1.5rem; }
   .dropdown .dropdown-header {
     margin-bottom: 0px; }
@@ -578,5 +767,5 @@ footer {
       .faq-banner .sub-nav .cell a {
         color: #3875FC; }
 
-.faq-contact-cta h2 {
+.faq-contact-cta h2, .faq-contact-cta h1.header-two, .faq-contact-cta h3.header-two, .faq-contact-cta h4.header-two, .faq-contact-cta h5.header-two, .faq-contact-cta h6.header-two, .faq-contact-cta p.header-two, .faq-contact-cta a.header-two {
   margin-bottom: 30px; }

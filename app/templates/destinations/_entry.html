@@ -1,7 +1,7 @@
 {% extends "_layout" %}
 {% block content %}
 
-<section class="banner blue">
+<section class="banner blue inner-destination">
 	<div class="grid-container">
 		<div class="grid-x align-middle">
 			
@@ -17,51 +17,52 @@
 			
 		</div>
 	</div>
+	
+	<div class="bubble-one"></div>
+	<div class="bubble-two"></div>
+	<div class="bubble-three"></div>
+	<div class="bubble-four"></div>
 </section>
 {% set amenities = entry.amenities.all() %}
 {% set counter = 1 %}
-{% for each in amenities %}
-	{% if each.type == 'attraction' %}
-		{% if counter == 1 %}
-<section class="attraction{% if loop.last %}pb{% endif %}">
+<section class="attraction pbt">
 	<div class="grid-container">
-		<div class="grid-x grid-margin-x align-middle">
 			
-			<div class="small-12 medium-6 cell">
-				<h2 class="blue">{{ each.headline }}</h3>
-				<p>{{ each.copy }}</p>
+			{% for each in amenities %}
+			{% if each.type == 'attraction' %}
+			{% if counter == 1 %}
+			<div class="grid-x grid-margin-x align-middle left">
+				<div class="small-12 medium-6 cell content">
+					<h2 class="blue">{{ each.headline }}</h3>
+					<p>{{ each.copy }}</p>
+				</div>
+				<div class="small-12 medium-6 cell image">
+					<img alt="{{ each.images.one().title }}" src="{{ each.images.one().url }}" />
+				</div>
 			</div>
-			<div class="small-12 medium-6 cell">
-				<img alt="{{ each.images.one().title }}" src="{{ each.images.one().url }}" />
+			{% set counter = counter + 1 %}
+			{% else %}
+			<div class="grid-x grid-margin-x align-middle right">
+				<div class="small-12 medium-6 cell image">
+					<img alt="{{ each.images.one().title }}" src="{{ each.images.one().url }}" />
+				</div>
+				<div class="small-12 medium-6 cell content">
+					<h2 class="blue">{{ each.headline }}</h3>
+					<p>{{ each.copy }}</p>
+				</div>
 			</div>
+			{% set counter = 1 %}
+			{% endif %}
+			{% endif %}
+			{% endfor %}
 			
-		</div>
 	</div>
 </section>
-		{% set counter = counter + 1 %}
-		{% else %}
-<section class="attraction{% if loop.last %}pb{% endif %}">
-	<div class="grid-container">
-		<div class="grid-x grid-margin-x align-middle">
-			
-			<div class="small-12 medium-6 cell">
-				<img alt="{{ each.images.one().title }}" src="{{ each.images.one().url }}" />
-			</div>
-			<div class="small-12 medium-6 cell">
-				<h2 class="blue">{{ each.headline }}</h3>
-				<p>{{ each.copy }}</p>
-			</div>
-			
-		</div>
-	</div>
-</section>
-		{% set counter = 1 %}
-		{% endif %}
-	{% endif %}
-{% endfor %}
+
 <section class="resort pbt light-grey">
 	<div class="grid-container">
-		<h1 class="blue underline inline-block">Resorts</h1>
+		<h1 class="blue text-center"> Explore {{ entry.title }}</h1>
+		<h2 class="blue underline inline-block">Resorts</h2>
 		<div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
 {% for each in amenities %}
 	{% if each.type == 'resort' %}
@@ -79,13 +80,16 @@
 </section>
 <section class="activity light-grey">
 	<div class="grid-container">
+		<h2 class="blue underline inline-block" >Activities</h2>
 		<div class="grid-x grid-margin-x align-justify">
 {% for each in amenities %}
 	{% if each.type == 'activity' %}
-			<div class="medium-12 large-shrink cell feature">
+			<div class="medium-12 large-6 cell feature">
+				<div class="feature-container">
 				<h2 class="blue">{{ each.activityName }}</h2>
 				<p>{{ each.copy }}</p>
 				<img class="icon" src="{{ each.icon.one().url }}" />
+				</div>
 			</div>
 	{% endif %}
 {% endfor %}
