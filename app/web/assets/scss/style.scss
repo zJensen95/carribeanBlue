@@ -8,6 +8,17 @@
 
 @import 'fonts.css';
 
+@media (max-width: 1024px) {
+	html {
+		font-size: 90%;
+	}
+}
+@media (max-width: 640px) {
+	html {
+		font-size: 80%;
+	}
+}
+
 /*
 	
 	General
@@ -286,6 +297,86 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 
+// --------- Scroll Animations --------- //
+
+// Easings
+
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);;
+
+// Animations Final State
+.fade-up {
+	opacity: 1;
+	transform: translateY(0);
+	
+	transition: all .8s $easeOutBack;
+}
+
+.grow-down {
+	max-height: 1000px;
+	overflow: hidden;
+	
+	transition: all .8s ease-out;
+}
+.shrink-down {
+	transform: scale(0, 0);
+	
+	transition: all .8s ease-out;
+}
+
+.rotate-fade-up {
+	opacity: 1;
+	transform: rotate(0deg) translateY(0px);
+	
+	transition: opacity .5s ease-out, transform 1s $easeOutBack;
+}
+
+.scroll-animation-trigger {
+	
+	// Animations Beginning State
+	
+	.fade-up {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	
+	.grow-down {
+		padding: 0px !important;
+		min-height: 0px !important;
+		max-height: 0px !important;
+	}
+	&.grow-down {
+		padding: 0px !important;
+		min-height: 0px !important;
+		max-height: 0px !important;
+	}
+	
+	.shrink-down {
+		transform: scale(1, 1);
+	}
+	
+	.rotate-fade-up {
+		opacity: 0;
+		transform: rotate(5deg) translateX(-40px);
+	}
+	
+}
+
+// Transition Delay
+
+@for $i from 1 through 10 {
+	.transition-delay-#{$i} {
+		transition-delay: $i / 10 + s;
+	}
+}
+
+// Transition Length
+
+@for $i from 1 through 10 {
+	.transition-duration-#{$i} {
+		transition-duration: $i * 2 / 10 + s;
+	}
+}
+
 // --------- Interactive -------- //
 
 // Button
@@ -518,6 +609,8 @@ footer {
 		border-bottom: 2px solid #444;
 		background: none;
 		
+		transition: all .1s ease-out;
+		
 		&::placeholder {
 			color: #000;
 		}
@@ -525,14 +618,22 @@ footer {
 			background: none;
 			border: none;
 			box-shadow: none;
-			border-bottom: 2px solid #aaa;
-
+			border-bottom: 2px solid #000;
+			padding-bottom: 11px;
+		}
+		&:active {
+			padding-bottom: 0px;
+			
+			transition: all .1s ease-out;
 		}
 		&:focus {
 			background: none;
 			border: none;
 			box-shadow: none;
 			border-bottom: 2px solid #000;
+			padding-bottom: 8px;
+			
+			transition: all .1s ease-out
 		}
 	}
 	.date-cell {
@@ -577,8 +678,8 @@ footer {
 .bubble {
 	background: $transparent-blue;
 	position: relative;
-	width: 35vw;
-	height: 35vw;
+	width: 35vw; min-width: 500px;
+	height: 35vw; min-height: 500px;
 	border-radius: 10000px;
 	
 	.bubble-one,
@@ -605,6 +706,32 @@ footer {
 			width: 80%;
 		transform: translate(-50%, -50%);
 	}
+}
+
+@media (max-width: 1024px) {
+	
+	.bubble {
+		width: 60vw;
+		height: 6f0vw;
+	}
+	
+}
+@media (max-width: 640px) {
+	
+	.bubble {
+		min-height: 0px;
+		min-width: 0px;
+		
+		h1 {
+			font-size: 1.8rem;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+		.pt-medium {
+			padding-top: 0px;
+		}
+	}
+	
 }
 
 // Locations

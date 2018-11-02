@@ -1,12 +1,12 @@
 {% extends "_layout" %}
 {% block content %}
 
-<section class="banner bg-image destinations-banner no-padding-bot" style="background-image: url('assets/images/destination-banner.png')">
+<section class="banner bg-image destinations-banner no-padding-bot scroll-animation-trigger" style="background-image: url('assets/images/destination-banner.png')">
 	<div class="grid-container full-height">
 		<div class="grid-x full-height align-top align-center">
 			
 			<div class="small-12 medium-8 large-6 cell">
-				<div class="banner-content text-center">
+				<div class="banner-content text-center fade-up transition-duration-3">
 					<h1 class="white">Placeholder Title</h1>
 					<h3 class="white lowercase">Choose from over X destinations for your next dream vacation</h3>
 					<p>
@@ -24,11 +24,11 @@
 {% for each in destinations %}
 
 {% if counter == 1 %}
-<section class="three-cards light-grey pbt pb-xlarge">
+<section class="three-cards light-grey pbt pb-xlarge scroll-animation-trigger">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 	
-			<div class="small-12 medium-4 cell item">
+			<div class="small-12 medium-4 cell item fade-up {% if not loop.first %}transition-delay-{{ counter }} {% endif %}">
 				<div class="bg-image text-center" style="background-image: url('assets/images/bahamas_thumb.png')">
 					<h2 class="white">{{ each.title }}</h2>
 				</div>
@@ -39,7 +39,7 @@
 			</div>
 			{% set counter = counter + 1 %}
 			{% elseif counter == 2 %}
-			<div class="small-12 medium-4 cell item">
+			<div class="small-12 medium-4 cell item fade-up {% if not loop.first %}transition-delay-{{ counter }} {% endif %}">
 				<div class="bg-image text-center" style="background-image: url('assets/images/cay-sal_thumb.png')">
 					<h2 class="white">{{ each.title }}</h2>
 				</div>
@@ -50,7 +50,7 @@
 			</div>
 			{% set counter = counter + 1 %}
 			{% elseif counter == 3 %}
-			<div class="small-12 medium-4 cell item">
+			<div class="small-12 medium-4 cell item fade-up {% if not loop.first %}transition-delay-{{ counter }} {% endif %}">
 				<div class="bg-image text-center" style="background-image: url('assets/images/inagua_thumb.png')">
 					<h2 class="white">{{ each.title }}</h2>
 				</div>
@@ -65,13 +65,13 @@
 </section>
 {% set counter = counter + 1 %}
 {% elseif counter == 4 %}
-<section class="homepage-guide bg-image pbt" style="background-image: url('assets/images/destinations-feature-bg.png');">
+<section class="homepage-guide bg-image pbt scroll-animation-trigger" style="background-image: url('assets/images/destinations-feature-bg.png');">
 	<div class="grid-container">
 		<div class="grid-x">
 			
-			<div class="text-center bubble">
-				<div class="bubble-one"></div>
-				<div class="bubble-two"></div>
+			<div class="text-center bubble rotate-fade-up">
+				<div class="bubble-one fade-up transition-delay-3 transition-duraiton-4"></div>
+				<div class="bubble-two fade-up transition-delay-5 transition-duraiton-4"></div>
 				<div class="bubble-content">
 					<h1 class="white underline">{{ each.title }}</h1>
 					<p class="white pt-medium">{{ each.teaserDescription }}</p>
